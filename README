@@ -1,0 +1,15 @@
+Perl version of fakemail in Slackware package.
+
+http://sourceforge.net/projects/fakemail/
+
+Require:
+
+perl -MCPAN -e 'install Net::Server::Mail::SMTP'
+
+Relay from postfix:
+
+postconf -e 'relayhost = 127.0.0.1:1234'
+
+Automatic start:
+
+echo "/etc/rc.d/rc.fakemail" >> /etc/rc.d/rc.local
