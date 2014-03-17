@@ -1,5 +1,5 @@
 PRGNAM=fakemail
-VERSION=1.10
+VERSION=1.11
 BUILD=1
 PACKAGE=$(PRGNAM)-$(VERSION)-noarch-$(BUILD).txz
 
@@ -13,4 +13,4 @@ uninstall:
 	removepkg $(PACKAGE)
 
 clean:
-	rm -f $(PACKAGE)
+	rm -f *.txz

@@ -1,7 +1,7 @@
-#!/usr/bin/perl -w
-#
-# $Id: fakemail,v 1.10 2005/03/18 15:44:00 lastcraft Exp $
-#
+#!/usr/bin/perl
+
+use strict;
+use warnings;
 use Net::Server::Mail::SMTP;
 use IO::Socket::INET;
 use Getopt::Long;
@@ -138,7 +138,7 @@ serve();
         if (! defined($counts{$recipient})) {
             $counts{$recipient} = 1;
         }
-        return "$path/$recipient." . $counts{$recipient}++;
+        return "$path/$recipient." . $counts{$recipient}++ . '.eml';
     }
 }
 
